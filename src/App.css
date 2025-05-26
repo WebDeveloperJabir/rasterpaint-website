@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Font */
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto.ttf);
+}
+
+/* Body */
+body {
+  font-family: "Roboto";
+}
+
+/* Root */
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto;
+  height: 100vh;
+}
+
+/* Top Content */
+.top-content {
+  grid-row: 1/2;
+}
+
+/* Main Content */
+main {
+  display: grid;
+  grid-row: 2/3;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: 1fr auto;
+}
+
+/* Top Navbar */
+.top-navbar {
+  width: 100%;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+}
+.top-navbar ul {
+  list-style-type: none;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+.top-navbar ul li.hover-list {
+  background: #921919;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+}
+.top-navbar ul li ul {
+  list-style-type: none;
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 1px 1px 4px black;
+  top: 100%;
+  left: 0;
+  font-size: 13px;
+}
+.top-navbar ul li:hover > ul {
+  display: flex;
+}
+.top-navbar ul li ul li {
+  padding: 3px;
+  width: 140px;
+}
+.top-navbar ul li ul li:hover {
+  background-color: aqua;
+}
+
+/* Tools Bar */
+.tools-bar {
+  background-color: #d9e8ee;
+  grid-column: 1/3;
+}
+
+/* Canvas Area */
+.canvas-area {
+  background-color: #a7a7a7;
+  grid-column: 3/18;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.canvas-area .canvas-resizer {
+  border: 1px solid black;
+}
+.canvas-area .canvas-resizer .resizable-canvas {
+  width: 100%;
+  height: 100%;
+  background-color: beige;
+  display: block;
+}
+
+/* Bottom Content */
+.bottom-content {
+  height: 20px;
+  background-color: rgb(173, 31, 31);
+  grid-row: 2/3;
+  grid-column: 1/-1;
+}
+
+/* Right Bar */
+.right-bar {
+  grid-column: 18/-1;
+  background-color: #921919;
+}
