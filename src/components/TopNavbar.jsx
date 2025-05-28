@@ -16,7 +16,7 @@ export default function TopNavbar() {
           </ul>
         </li>
         <li className="hover-list">
-          File
+          Edit
           <ul className="">
             <li>Download</li>
             <li>Import / Open</li>
@@ -27,7 +27,7 @@ export default function TopNavbar() {
           </ul>
         </li>
         <li className="hover-list">
-          File
+          View
           <ul className="">
             <li>Download</li>
             <li>Import / Open</li>
@@ -38,7 +38,7 @@ export default function TopNavbar() {
           </ul>
         </li>
         <li className="hover-list">
-          File
+          Tools
           <ul className="">
             <li>Download</li>
             <li>Import / Open</li>
@@ -49,7 +49,29 @@ export default function TopNavbar() {
           </ul>
         </li>
         <li className="hover-list">
-          File
+          Image
+          <ul className="">
+            <li>Download</li>
+            <li>Import / Open</li>
+            <li>Unknown</li>
+            <li>Unknown</li>
+            <li>Unknown</li>
+            <li>Unknown</li>
+          </ul>
+        </li>
+        <li className="hover-list">
+          Help
+          <ul className="">
+            <li>Download</li>
+            <li>Import / Open</li>
+            <li>Unknown</li>
+            <li>Unknown</li>
+            <li>Unknown</li>
+            <li>Unknown</li>
+          </ul>
+        </li>
+        <li className="hover-list">
+          Extras
           <ul className="">
             <li>Download</li>
             <li>Import / Open</li>

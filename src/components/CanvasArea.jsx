@@ -4,7 +4,24 @@ import { useState } from "react";
 
 export default function CanvasArea() {
   const canvasRef = useRef(null);
+  const [willHidden, setWillHidden] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [classOfResizer, setClassOfResizer] = useState("");
+  const [sizeOfCanvas, setSizeOfCanvas] = useState({ width: 500, height: 400 });
+
+  const [canvasSize, setCanvasSize] = useState({
+    width: 500,
+    height: 400,
+  });
+
+  const handleCanvasResize = (e, direction, ref) => {
+    setCanvasSize({
+      width: ref.offsetWidth,
+      height: ref.offsetHeight,
+    });
+    setClassOfResizer("action-resize");
+    console.log("Canvas resized:", ref.offsetWidth, ref.offsetHeight);
+  };
 
   const handleMouseMove = (e) => {
     const canvas = canvasRef.current;
@@ -40,25 +57,59 @@ export default function CanvasArea() {
           }}
           disableDragging={true}
           bounds="parent"
-          className="canvas-resizer"
+          className={`canvas-resizer ${classOfResizer}`}
+          onResize={handleCanvasResize}
+          onResizeStop={() => {
+            setClassOfResizer("");
+            setSizeOfCanvas({
+              width: canvasSize.width,
+              height: canvasSize.height,
+            });
+          }}
         >
           <canvas
             ref={canvasRef}
             className="resizable-canvas"
             onMouseMove={handleMouseMove}
+            onMouseLeave={() => setWillHidden(false)}
+            onMouseEnter={() => setWillHidden(true)}
+            onMouseOut={() => setWillHidden(false)}
+            style={{
+              width: `${sizeOfCanvas.width}px`,
+              height: `${sizeOfCanvas.height}px`,
+            }}
           ></canvas>
         </Rnd>
       </div>
       <div className="bottom-content">
-        <div className="position">
-          <span className="coordinate">{position.x}</span>
-          <span className="pixel">px, </span>
-          <span className="coordinate">{position.y}</span>
+        <div className="position place">
+          {willHidden && (
+            <>
+              <span className="main-data">{position.x}</span>
+              <span className="pixel">px, </span>
+              <span className="main-data">{position.y}</span>
+              <span className="pixel">px</span>
+            </>
+          )}
+        </div>
+        <div className="shape-size place"></div>
+        <div className="canvas-size place">
+          <span className="main-data">{canvasSize.width} </span>
+          <span className="pixel">px</span>
+          <span
+            style={{
+              fontSize: "11px",
+              color: "black",
+              marginLeft: "4px",
+              marginRight: "4px",
+            }}
+          >
+            &#10005;{" "}
+          </span>
+          <span className="main-data">{canvasSize.height}</span>
           <span className="pixel">px</span>
         </div>
-        <div className="shape-size"></div>
-        <div className="canvas-size"></div>
-        <div className="canvas-zoom"></div>
+        <div className="canvas-zoom place"></div>
       </div>
     </>
   );
