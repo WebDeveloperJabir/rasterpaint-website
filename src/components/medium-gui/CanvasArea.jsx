@@ -20,7 +20,6 @@ export default function CanvasArea() {
       height: ref.offsetHeight,
     });
     setClassOfResizer("action-resize");
-    console.log("Canvas resized:", ref.offsetWidth, ref.offsetHeight);
   };
 
   const handleMouseMove = (e) => {

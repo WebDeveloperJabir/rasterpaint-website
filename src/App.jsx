@@ -1,18 +1,19 @@
 import "./App.css";
-import Main from "./components/MainContent";
-import ToolsBar from "./components/ToolsBar";
-import TopContent from "./components/TopContent";
-import TopNavbar from "./components/TopNavbar";
-import MainContent from "./components/MainContent";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HelmetProvider, Helmet } from "react-helmet-async";
 // import AlertYesNo from "./components/AlertYesNo";
+import MediumApp from "./components/medium-gui/MediumApp";
+import Home from "./components/home/Home";
+import "./components/medium-gui/MediumStyle.css";
 
 function App() {
   return (
-    <>
-      <TopContent />
-      <MainContent />
-      {/* <AlertYesNo /> */}
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/medium" element={<MediumApp />}></Route>
+      </Routes>
+    </Router>
   );
 }
 

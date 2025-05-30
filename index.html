@@ -7,6 +7,36 @@
     <title>RasterPaint - Draw your masterpiece</title>
   </head>
   <body>
+
+    <style>
+      #screen-size-bar {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.75);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        z-index: 9999;
+        pointer-events: none;
+      }
+    </style>
+    <div id="screen-size-bar">Screen: 0×0</div>
+    <script>
+      const screenSizeBar = document.getElementById("screen-size-bar");
+      function updateScreenSize() {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        screenSizeBar.textContent = `Screen: ${width}×${height}`;
+      }
+      // Initial call
+      updateScreenSize();
+      // Update on resize
+      window.addEventListener("resize", updateScreenSize);
+    </script>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
