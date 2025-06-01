@@ -82,7 +82,7 @@ export default function ToolsBar() {
             <p>Select a color</p>
           </div>
           <div className="color-board">
-            {[...Array(32)].map((_, index) => (
+            {[...Array(10)].map((_, index) => (
               <div key={index} className="color-display disable"></div>
             ))}
           </div>
@@ -91,29 +91,6 @@ export default function ToolsBar() {
         <h3 className="title-on-toolsbar">Shapes</h3>
         <div className="color-choose">
           <div className="color-board">
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
-            <div className="color-display"></div>
             <div className="color-display"></div>
             <div className="color-display"></div>
             <div className="color-display"></div>

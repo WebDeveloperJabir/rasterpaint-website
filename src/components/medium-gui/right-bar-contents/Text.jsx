@@ -3,7 +3,7 @@ import React from 'react'
 export default function Text() {
   return (
     <details className="text-proprties content">
-      <summary>Canvas and Others</summary>
+      <summary>Text</summary>
       <div className="inside-details">
         <div className="canvas-size">
           <p className="title">Canvas Size</p>

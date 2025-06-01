@@ -3,7 +3,7 @@ import React from "react";
 export default function Zoom() {
   return (
     <details className="zoom-properties content">
-      <summary>Canvas and Others</summary>
+      <summary>Zoom</summary>
       <div className="inside-details">
         <div className="canvas-size">
           <p className="title">Canvas Size</p>

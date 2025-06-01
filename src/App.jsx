@@ -7,14 +7,7 @@ import Home from "./components/home/Home";
 import "./components/medium-gui/MediumStyle.css";
 
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/medium" element={<MediumApp />}></Route>
-      </Routes>
-    </Router>
-  );
+  return <MediumApp />;
 }
 
 export default App;

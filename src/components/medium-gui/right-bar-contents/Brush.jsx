@@ -3,46 +3,28 @@ import React from "react";
 export default function Brush() {
   return (
     <details className="brush-properties content">
-      <summary>Canvas and Others</summary>
+      <summary>Brush</summary>
       <div className="inside-details">
-        <div className="canvas-size">
-          <p className="title">Canvas Size</p>
-          <div className="full-input-area">
-            <label htmlFor="">Width:</label>
-            <div className="input-area">
-              <input type="number" name="" id="" min={0} />
-              <p>px</p>
-            </div>
-          </div>
-          <div className="gap"></div>
-          <div className="full-input-area">
-            <label htmlFor="">Heght:</label>
-            <div className="input-area">
-              <input type="number" name="" id="" min={0} />
-              <p>px</p>
-            </div>
-          </div>
-        </div>
         <div className="gap"></div>
-        <div className="canvas-color">
-          <p className="title">Canvas Color</p>
+        <div className="brush-style">
+          <p className="title">Brush Style</p>
           <div className="full-input-area">
-            <label htmlFor="">Color:</label>
+            <label htmlFor="">Style:</label>
             <div className="input-area">
-              <input type="color" name="" id="" />
+              <select name="" id="">
+                <option value="">TEE</option>
+                <option value="">TEE</option>
+                <option value="">TEE</option>
+                <option value="">TEE</option>
+                <option value="">TEE</option>
+                <option value="">TEE</option>
+              </select>
             </div>
           </div>
         </div>
+        <p>You can use your own swatch or photo</p>
+        <input type="file" name="" id="" />
         <div className="gap"></div>
-        <div className="others-settings">
-          <p className="title">Others</p>
-          <div className="full-input-area">
-            <label htmlFor="">Reset settings:</label>
-            <div className="input-area">
-              <button>Reset</button>
-            </div>
-          </div>
-        </div>
       </div>
     </details>
   );

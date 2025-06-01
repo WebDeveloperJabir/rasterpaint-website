@@ -3,43 +3,18 @@ import React from "react";
 export default function Pencil() {
   return (
     <details className="pencil-properties content">
-      <summary>Canvas and Others</summary>
+      <summary>Pencil</summary>
       <div className="inside-details">
-        <div className="canvas-size">
-          <p className="title">Canvas Size</p>
+        <div className="pencil-caps">
+          <p className="title">Pencil Caps</p>
           <div className="full-input-area">
-            <label htmlFor="">Width:</label>
+            <label htmlFor="">Caps:</label>
             <div className="input-area">
-              <input type="number" name="" id="" min={0} />
-              <p>px</p>
-            </div>
-          </div>
-          <div className="gap"></div>
-          <div className="full-input-area">
-            <label htmlFor="">Heght:</label>
-            <div className="input-area">
-              <input type="number" name="" id="" min={0} />
-              <p>px</p>
-            </div>
-          </div>
-        </div>
-        <div className="gap"></div>
-        <div className="canvas-color">
-          <p className="title">Canvas Color</p>
-          <div className="full-input-area">
-            <label htmlFor="">Color:</label>
-            <div className="input-area">
-              <input type="color" name="" id="" />
-            </div>
-          </div>
-        </div>
-        <div className="gap"></div>
-        <div className="others-settings">
-          <p className="title">Others</p>
-          <div className="full-input-area">
-            <label htmlFor="">Reset settings:</label>
-            <div className="input-area">
-              <button>Reset</button>
+              <div className="selection-place">
+                <button></button>
+                <button></button>
+                <button></button>
+              </div>
             </div>
           </div>
         </div>

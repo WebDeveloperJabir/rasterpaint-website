@@ -6,7 +6,11 @@
 /* Font */
 @font-face {
   font-family: "Roboto";
-  src: url(/fonts/Roboto.ttf);
+  src: url(/fonts/Roboto.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Minecraft";
+  src: url(/fonts/Minecraft.otf) format("otf");
 }
 
 /* Body */
@@ -29,4 +33,3 @@ button {
 button:hover {
   background-color: gray;
 }
-

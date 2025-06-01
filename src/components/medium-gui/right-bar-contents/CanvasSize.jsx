@@ -3,7 +3,7 @@ import React from "react";
 export default function CanvasSize() {
   return (
     <details className="canvas-content content">
-      <summary>Canvas and Others</summary>
+      <summary>Canvas</summary>
       <div className="inside-details">
         <div className="canvas-size">
           <p className="title">Canvas Size</p>
